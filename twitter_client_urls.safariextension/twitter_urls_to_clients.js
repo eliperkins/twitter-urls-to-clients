@@ -14,7 +14,10 @@ function change_twitter_to_clients() {
         if(components.length == 4){
             var username = components[3]
             anchor.href = "tweetbot:///user_profile/" + username
-        } 
+        } else if ((components.length == 6) && (components[4] == 'status')) {
+          var status = components[5]
+          anchor.href = "tweetbot:///status/" + status
+        }
         
       }
     }
